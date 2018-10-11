@@ -7,7 +7,7 @@ app.controller('MainController', function($scope, $http){
 
     $scope.currencies = ['Select','GBP', 'EUR', 'USD','TRY', 'BRL', 'CAD', 'AUD', 'EGP', 'JPY', 'CNY', 'AED'];
     
-        $scope.str = "Currency rates from 'https://api.exchangeratesapi.io' by date: " ;  
+        $scope.str = "Currency rates from < https://api.exchangeratesapi.io > by date: " ;  
         $scope.InCurr ="Select";
         $scope.OutCurr="Select";
       
