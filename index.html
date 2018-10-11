@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="MyStart">
+    <head>
+            <link rel="stylesheet" type="text/css" href="styles.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script data-require="angular.js@*" data-semver="4.0.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+            <script data-require="angular.js@*" data-semver="4.0.0" src="script.ts"></script>
+            <script data-require="angular.js@*" data-semver="4.0.0" src="system.config.js"></script>
+            <script data-require="angular.js@*" data-semver="4.0.0" src="tsconfig.json"></script>
+            <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <script src="cytoscape.js"></script>
+            <script  src="script.js"></script>
+    </head>
+    
+    <body ng-controller="MainController" > 
+            
+      <div class="main">      
+        <div id="header" class="container-fluid">
+            <h2 class="text-center">  Currency Calculator</h2>
+        </div>
+        <div class="row"><br/></div>
+        <div class="row" >
+            <div class="col" > 
+                    <input  class="form-control"  id="CurrAmnt" ng-model="InputAmount" placeholder="Amount" type="number"  >
+            </div>
+            <div class="col"> 
+                <select class="form-control" id="selectO" data-ng-model="InCurr" ng-change="sorgula()">
+                    <option ng-repeat="curr in currencies">{{curr}}</option>
+                </select>
+            </div> 
+            <div class="col" id="symb"> <h4 ><span class="glyphicon glyphicon-transfer"></span> </h4></div>
+            <div class="col">        
+                <input class="form-control" disabled="true"  id="CurrAmnt" ng-model="outAmount()" placeholder="Amount" type="number" >
+            </div>
+            <div class="col"> 
+                <select class="form-control" id="selectO" data-ng-model="OutCurr" >
+                    <option ng-repeat="curr in currencies">{{curr}}</option>
+                </select>
+            </div>
+        </div>
+     
+        <div class="row" >  
+                <!-- <div class="col check-element animate-show-hide"><h6 class="text-center">exchange rate : {{user.rates[OutCurr]}}</h6></div> -->
+                <div class="col"><h6 class="text-center">Exchange Rate: {{user.rates[OutCurr]}}</h6></div>
+            </div>
+        <div class="row"><br/></div>
+        <div class="row" >  
+        <div class="col"><h5 class="text-center">{{str}}{{sTime}}</h5></div>
+        </div>
+           
+            <br/>
+            
+    </div>
+
+    
+    </body>
+
+    </html>
