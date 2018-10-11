@@ -11,7 +11,7 @@ app.controller('MainController', function($scope, $http){
         $scope.InCurr ="Select";
         $scope.OutCurr="Select";
       
-       $scope.sorgula = function(){
+       $scope.Inquiry = function(){
            
         sTime = new Date();
         $scope.sTime = sTime.toLocaleTimeString();
